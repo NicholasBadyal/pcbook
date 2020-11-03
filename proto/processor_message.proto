@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option go_package = "proto/processor_msg";
+
+message CPU {
+  string brand = 1;
+  string name = 2;
+  uint32 core_count = 3;
+  uint32 thread_count = 4;
+  double core_frequency = 5;
+  double boost_frequency = 6;
+}
