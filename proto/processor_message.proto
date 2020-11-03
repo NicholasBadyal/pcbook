@@ -1,12 +1,23 @@
 syntax = "proto3";
 
-option go_package = "proto/processor_msg";
+package example.pcbook;
+option go_package = "proto/pb";
+
+import "proto/memory_message.proto";
 
 message CPU {
   string brand = 1;
   string name = 2;
   uint32 core_count = 3;
   uint32 thread_count = 4;
-  double core_frequency = 5;
-  double boost_frequency = 6;
+  double core_frequency_ghz = 5;
+  double boost_frequency_ghz = 6;
+}
+
+message GPU {
+  string brand = 1;
+  string name = 2;
+  double base_frequency_ghz = 3;
+  double boost_frequency_ghz = 4;
+  Memory memory = 5;
 }
