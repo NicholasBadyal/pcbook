@@ -3,6 +3,7 @@ package sample
 import (
 	pb "github.com/pcbook/api/v1/proto"
 	"math/rand"
+	"time"
 )
 
 func randomBool() bool {
@@ -83,4 +84,12 @@ func randomGPUName(brand string) string {
 
 func randomFloat32(min, max float32) float32 {
 	return min + rand.Float32() * (max - min)
+}
+
+func RandomLaptopScore() float64 {
+	return 1.0 + rand.Float64() * 9.0
+}
+
+func init() {
+	rand.Seed(time.Now().UnixNano())
 }

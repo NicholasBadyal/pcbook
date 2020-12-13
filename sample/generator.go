@@ -98,7 +98,7 @@ func NewHDD() *pb.Storage {
 }
 
 func randomScreenResolution() *pb.Screen_Resolution {
-	height := randomInt(1080, 4320)
+	height := randomInt(1080, 4) + 1
 	width := height * 16 / 9
 
 	resolution := &pb.Screen_Resolution{
