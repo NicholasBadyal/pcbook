@@ -6,10 +6,7 @@ gen:
 test: gen
 	go test -v -cover -race ./...
 
-run: gen
-	go run main.go
-
-server:
+server: gen
 	go run cmd/server/main.go -port 8080
 
 client:
